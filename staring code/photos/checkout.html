@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — Megapark Resort</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Megapark Resort</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container section">
+    <h3>Your Checkout</h3>
+    <div class="card">
+      <div id="checkout-items"></div>
+      <div style="margin-top:1rem;display:flex;justify-content:space-between;align-items:center">
+        <strong>Total: KES <span id="checkout-total">0</span></strong>
+        <button id="place-order" class="btn">Place Order</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem">
+      <h4>Contact & Delivery Details</h4>
+      <form id="checkout-form" class="form-grid">
+        <input name="name" placeholder="Full name" required>
+        <input name="email" placeholder="Email" required>
+        <input name="phone" placeholder="Phone" required>
+        <input name="address" placeholder="Address / room number">
+        <button class="btn" type="submit">Confirm Details</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

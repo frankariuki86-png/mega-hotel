@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orders</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+  <link rel="stylesheet" href="styles/shared/general.css" />
+  <link rel="stylesheet" href="styles/shared/header.css" />
+   <link rel="stylesheet" href="styles/pages/orders.css" />
+  </head>
+  <body>
+     <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="photos/logo.png" style="border-radius: 20px;" alt="Megapark Resort logo" />
+        <h1 class="header-h1"><span>Megapark Resort</span></h1>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#halls">Halls</a></li>
+          <li><a href="index.html#rooms">Accommodation</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="orders.html" id="book-now" class="book-btn">Orders</a></li>
+           <li><a href="checkout.html" id="book-now" class="book-btn">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div class="orders-page">
+      <div class="main">
+        <div class="page-title">Your Orders</div>
+
+        <div class="order-container">
+          <div class="order-header">
+            <div class="order-header-left-section">
+              <div class="order-date">
+                <div class="order-label">Order Placed:</div>
+                <div class="order-value">August 12</div>
+              </div>
+              <div class="order-total">
+                <div class="order-label">Total:</div>
+                <div class="order-value">KES 3,500.00</div>
+              </div>
+            </div>
+            <div class="order-header-right-section">
+              <div class="order-id">
+                <div class="order-label">Order ID:</div>
+                <div class="order-value">27cba69d-4c3d-4098-b42d-ac7fa62b7664</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-details-grid">
+            <div class="product-image-container">
+              <img src="photos/chapati nyama.png" alt="product">
+            </div>
+            <div class="product-details">
+              <div class="product-name">Chapati & Nyama</div>
+              <div class="product-arrival-date">Arriving on: August 15</div>
+              <div class="product-quantity">Quantity: 1</div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product-actions">
+              <a href="tracking.html" class="track-package-link">Track package</a>
+            </div>
+
+            <div class="product-image-container">
+              <img src="photos/matoke.png" alt="product">
+            </div>
+            <div class="product-details">
+              <div class="product-name">Matoke & beef</div>
+              <div class="product-arrival-date">Arriving on: August 19</div>
+              <div class="product-quantity">Quantity: 2</div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product-actions">
+              <a href="tracking.html" class="track-package-link">Track package</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-container">
+          <div class="order-header">
+            <div class="order-header-left-section">
+              <div class="order-date">
+                <div class="order-label">Order Placed:</div>
+                <div class="order-value">June 10</div>
+              </div>
+              <div class="order-total">
+                <div class="order-label">Total:</div>
+                <div class="order-value">KES 4,190.00</div>
+              </div>
+            </div>
+            <div class="order-header-right-section">
+              <div class="order-id">
+                <div class="order-label">Order ID:</div>
+                <div class="order-value">b6b6c212-d30e-4d4a-805d-90b52ce6b37d</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-details-grid">
+            <div class="product-image-container">
+              <img src="photos/Nyama-Choma-1-1080x1080.jpg.webp" alt="product">
+            </div>
+            <div class="product-details">
+              <div class="product-name">Nyama Choma</div>
+              <div class="product-arrival-date">Arriving on: June 17</div>
+              <div class="product-quantity">Quantity: 2</div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product-actions">
+              <a href="tracking.html" class="track-package-link">Track package</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+﻿/* Basic Reset */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0;
+ }
+img {
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+html,body {
+   height: 100%; 
+   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+   color:  black;
+   background: #ffffff; 
+   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+   }
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+/* Main layout - account for fixed header */
+main {
+  padding-top: 90px;
+}
+
+/* Layout helpers */
+.container { 
+  max-width: 1500px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  border: #0b7546 solid 1px;
+  border-radius: 4px;
+
+}
+.section { 
+  padding: 56px 0; 
+}
