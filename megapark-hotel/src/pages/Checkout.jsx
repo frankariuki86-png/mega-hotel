@@ -45,13 +45,19 @@ const Checkout = () => {
     }
   };
 
+  const today = new Date();
+  const todayFormatted = today.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   const deliveryOptions = [
-    { date: 'Tuesday, June 21', price: 'FREE', label: 'Standard Delivery' },
-    { date: 'Monday, June 20', price: '200 KES', label: 'Express Delivery' }
+    { date: todayFormatted, price: 'FREE', label: 'Standard Delivery' }
   ];
 
-  const getDeliveryDate = (itemId, optionIndex) => {
-    return deliveryOptions[optionIndex || 0];
+  const getDeliveryDate = (itemId) => {
+    return deliveryOptions[0];
   };
 
   if (cart.length === 0) {
@@ -107,26 +113,12 @@ const Checkout = () => {
 
                 <div className="delivery-options">
                   <div className="delivery-options-title">Delivery option:</div>
-                  {deliveryOptions.map((option, index) => (
-                    <div key={index} className="delivery-option">
-                      <input
-                        type="radio"
-                        className="delivery-option-input"
-                        name={`delivery-option-${item.id}`}
-                        defaultChecked={index === 0}
-                        onChange={() =>
-                          setSelectedDelivery(prev => ({
-                            ...prev,
-                            [item.id]: index
-                          }))
-                        }
-                      />
-                      <div>
-                        <div className="delivery-option-date">{option.date}</div>
-                        <div className="delivery-option-price">{option.price} Shipping</div>
-                      </div>
+                  <div className="delivery-option">
+                    <div>
+                      <div className="delivery-option-date">{deliveryOptions[0].date}</div>
+                      <div className="delivery-option-price">{deliveryOptions[0].price} Shipping</div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
